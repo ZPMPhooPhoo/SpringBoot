@@ -1,0 +1,138 @@
+Introduction to Spring
+
+Apache PHP Model => one request and one process
+
+Common Gateway Interface
+CGI and Fast CGI (multiple request and process)
+Servelet is like a Fast CGI.
+
+Spring in Action, Sixth Edition
+
+Why Spring is popular?
+POJO, Bean, Services, Security etc are so called Container.
+Managed => Application, Component, Object
+
+Bean is a java class and contains getter, setter, no argument constructor. Components or beans are wired together. If you need component bean is created component and if you need dependency bean is created dependency, that's called wired.
+
+POJO => Plain Old Java Object (not implements and not extends)
+
+Dependency Injection
+SOLID Principles
+S => Single Responsibility Principle (One reason to change)
+O => Open Close Principle, Open for Extension, close for Modification
+
+extensible without breaking existing feature => Can use many engine without touch Car
+
+L => Liskov Substitution Principle => car use parent(Engine) reference
+			 	   => replace with child(gasengine, dieselengine) for Engine
+				   => same method in parent and child
+I => Interface Segregation Principle (don't implements unusable such as MouseListener) thin interface
+
+D => Dependency Inversion (open close principle ko pyay lal say tal)
+
+
+Dependency Injection Container
+Spring life cycle managed => create and destroy components, service....
+
+Annotation =>@ (eg: @configuration)
+
+
+Spring Tool Suite
+Workspace => just a folder.
+Create new Spring Starter Project
+build system => java -> byte code -> jar file (or) war file
+library
+	->dependency->jar
+Maven &  Gradle (like npm in node.js build)
+Gradle => groovy
+
+Name => spring-demo
+Location
+Type => Maven
+Java Version => 17
+Packaging => Jar
+Language => Java
+Group => package Name => com.turingjavaee7
+Artifact => Project Name => spring-demo
+Description => Demo Project for Spring Boot
+Package => com.turingjavaee7.demo
+
+Spring Boot Version => 3.1.3
+Library => Spring Boot DeveTools (For Hot Reload)
+	=> Lombook (For getter setter)
+	=> Spring Web (Web API, Web MVC)
+	=> Thymeleaf (View Engine, Template Engine)
+
+maven install
+
+pom.xml => add dependency => need functions, modules, libraries in framework 
+
+maven update => Project right click-> maven->update project
+Under Maven Dependencies(It is like a package.json)
+if error in maven dependencies => clean maven dependencies and Force Update of Snapshots/Releases
+
+Maven also used for build to produce jar file , war file
+Project right click->run as->Maven build->Goals->clean install->apply =>(jar file in target folder)
+
+mvnw, mvnw.cmd => maven command
+src => code
+target ->build->artifact
+
+JRE => Java Runtime Environment => Java Version in your PC
+
+/src/main/java -> production java code
+/src/main/resources
+	application properties => database connection, username, password ....
+	static -> JS./ CSS/Image
+	templates -> Thymeleaf
+/src/test/java -> unit test code
+
+SpringDemoApplication.java
+@SpringBootApplication => main application
+Runing app => Project right click -> Run As -> Spring Boot App
+
+http://localhost:8080/
+
+For Controller
+src/main/java -> com.turingjavaee7.demo.controller ->HomeController
+
+@Controller
+public class HomeController{
+	@GetMapping("/")
+	String home()
+	{
+		System.out.println("Get/");
+		return "home";
+	}
+}
+
+For View
+/src/main/resources/templates-> home.html
+
+
+Spring run Embedded tomact Server
+
+
+Day2 Installer and Website
+
+MouserListener
+
+https://docs.oracle.com/javase/tutorial/uiswing/events/mouselistener.html?fbclid=IwAR0jKmRb5KkLabcOjveuyJWjloFSZyAq1f59mTdqUYjEbtUdHYZbuxUCrQo
+
+Install Maven
+
+https://maven.apache.org/install.html?fbclid=IwAR31w-jZzgT-TSlg-OC-urVnyQrULSmFol32MBJQMuhdFxfZQuGagTNq0ew
+
+
+
+
+
+
+
+
+
+
+
+
+
+

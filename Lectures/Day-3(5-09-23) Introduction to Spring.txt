@@ -1,0 +1,133 @@
+Import existing Maven Project
+Spring Boot Starter Web => embedded.tomcat.TomcatWebServer
+spring-boot-starter-thymeleaf => View Engine (Template)
+
+User-> Request
+	DispatcherServlet
+		Route
+		Controller
+			"home"
+			View-> template
+
+images store in /src/main/resources/static
+
+http://localhost:8080/images/apple.jpeg
+
+/src/test/java
+@WebMvcTest(HomeController.class)
+//@SpringBootTest
+class SpringDemoApplicationTests {
+
+	@Autowired
+	MockMvc mockMvc;
+	
+	@Test
+	void testHelloWorld() {
+		try {
+			mockMvc.perform(get("/"))
+				.andExpect(status().isOk())
+				.andExpect(view().name("home"))
+				.andExpect(content().string(containsString("Welcome")));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
+
+spring-boot-starter-test
+service, repository should test
+
+Completed initialization in 1 ms
+
+The core Spring Framework => Dependency Injection, Persistence, ... (Spring Facility)
+
+Spring Boot (specific version)
+
+Java -> byte code -> Run on JVM, so it is slowly.
+
+WebMVC
+Synchronous
+Model–View–Controller
+Model => Entity, Business Data, class, bean
+View => UI Rendering
+Controller => Handle Request
+
+Services => Business Logic
+Lombok => auto getter, setter
+
+model => Ingredient, Taco, TacoOrder
+
+controller
+@Slf4j => For log
+
+Spring Bean => default controller =>Singleton
+
+service, impl => ArithmeticService
+@Bean
+@Controller
+@Service
+@Configuration
+
+single route
+mapping
+bean->
+	method-> url
+		http method
+		parameter
+	/ GET bean-method
+
+Bean Naming Conventions
+
+Bean must be under root package
+
+@Bean => Custom Factory => ExampleBean2
+
+
+WevFlux
+Asynchronous and reactive
+
+
+Day3 Installer and Website
+
+Web MVC Framework
+
+https://docs.spring.io/spring-framework/docs/3.0.0.M4/spring-framework-reference/html/ch15s02.html?fbclid=IwAR18I3cE0yQRQ4FFTxH3oh8nqCCiH9_FOfxihoCsD5Z5lzNjHnjQw06_zU8
+
+Spring MVC XML Configuration
+
+https://memorynotfound.com/spring-mvc-xml-configuration-example/?fbclid=IwAR09y4NxRtZ9DTJe5B75xqV3GFmstmvBIMOKmP2srXKiZ4VMYbUje3Be5_o
+
+
+Lombok
+
+https://projectlombok.org/setup/eclipse
+
+
+Spring Framework
+
+https://docs.spring.io/spring-framework/reference/overview.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

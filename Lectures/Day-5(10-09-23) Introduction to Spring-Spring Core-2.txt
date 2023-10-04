@@ -1,0 +1,101 @@
+@Configuration
+AppConfig => put under root package
+
+AppliCtio Scope => http://localhost:8080/scopes/application
+		=> like Singeleton
+		=> but singleton is spring application context
+		=> application scope is servlet application context
+
+DispatcherServlet
+
+Multiple Servlet Application => share
+
+1 request per thred
+use with ThreadPool and reuse idle thread
+Request 200-> Thread 200
+
+စုစုပေါင်းရနိုင်တဲ့ thread ထက်ပိုတဲ့ request အရေအတွက်နဲ့ဝင်လာခဲ့ရင်
+ဒါဆို thread တွေမအားသ၍ request တွေက စောင့် နေရတော့မှာ
+
+Lifecycle
+init(), destroy()
+@PostConstruct
+@PreDestroy
+
+Like Constructor and Destructor
+
+@Component
+
+Annotation-based Container Configuration
+Auto configure-> if lib is present in classpath
+
+Autowired-> sterotype (component, service , repository. bean)
+
+@Autowired
+private MovieCatalog movieCatalog;
+
+@Inject, @Resource like @Autowired
+
+@ComponentScan => For Package
+
+@Qualifier => two implementations
+
+Spring is generally use one bean
+if use more than one bean => @Primary (@Qualifier)
+HomeController required a single bean, but 2 were found:
+Consider marking one of the beans as @Primary, or using @Qualifier to identify the bean
+
+@Resource(name = ......)
+
+Value
+
+@ComponentScan(basePackages = "org.example")
+
+@Configuration (or) SpringBootApplication
+
+spring-boot-starter-actuator => http://localhost:8080/actuator
+http://localhost:8080/actuator/health
+http://localhost:8080/actuator/beans
+http://localhost:8080/actuator/env
+http://localhost:8080/actuator/threaddump
+
+management.endpoints.web.exposure.include=*
+
+disable spring boot actualator endpoint 
+management.endpoints.web.exposure.exclude=threaddump
+management.endpoints.web.exposure.exclude=mappings
+
+Online json viewer => https://jsonviewer.stack.hu/
+
+
+Day5 Installer and Website
+
+Spring Bean Scopes, baeldung
+
+https://springframework.guru/spring-bean-scopes/?fbclid=IwAR3S5bRPdn9mKelI_8gWw8fM-KVr3iMcirWe82OQB_pK0OX9OqyLe2u5k_k
+
+Component Scan
+
+https://www.baeldung.com/spring-component-scanning?fbclid=IwAR12SXRJJfy8-4DBYvcjy4l1KWGLL_ab8ze8NRvUbBnUVBsmQdjkaOdsQ-o
+
+Value
+
+https://www.baeldung.com/spring-value-annotation?fbclid=IwAR12SXRJJfy8-4DBYvcjy4l1KWGLL_ab8ze8NRvUbBnUVBsmQdjkaOdsQ-o
+
+actuator endpoints
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html?fbclid=IwAR2duiOC9Gk2XkslcDqkxgSQCGMlKE3QcsSu0advfnNxc4u73-B3DyOvvXU
+
+
+
+
+
+
+
+
+
+
+
+
+
+

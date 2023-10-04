@@ -1,0 +1,75 @@
+JavaEE Java Enterprise Edition (or) JakartaEE
+JDK => Java Development Kit
+JRE => Java Runtime Environment
+Oracle JDK
+Open JDK
+
+Servlet/ JSP/ JSF (Backend + Frontend) / Structs
+JSF => Used Primefaces (Component based server side technology)
+
+Google Trend (Spring vs JSF)
+Spring Boot
+Defacto Standard => it is mostly used framework (eg: laravel in php, spring in java)
+
+Spring Boot is spring, it is easily setup and configuration.
+(1) WebMVC => Synchronus
+(2) WebFlux => Asynchronus and Reactive
+
+install Spring Tool Suite
+
+HTTP Request => GET /HTTP/1.1 (enter 2)
+	     => GET /robots.txt HTTP/1.1 (enter 2)
+one resource per request
+
+WebServe (PHP => Apache, ASP.Net => IIS)
+Java => HttpServlet Container, tomcat
+
+Servlet Problem => out.println ("<HTML><HEAD><TITLE> Hello World!</TITLE></HEAD></HTML>");
+
+JSP => It can write combine HTML, Servlet, Java.
+
+Node.js => Standalone run 
+
+
+container listen on port 8080
+2 request => 1 for HTTP, 2 for Favicon
+
+can host multiple application
+JSP compile-> Servlet Code-> Java bytecode
+
+java complete reference
+
+JBOSS => heavy
+tomcut, jetty, netty
+
+
+Day1 Installer and Website
+Install Spring Tool Suite
+
+https://spring.io/tools?fbclid=IwAR2tJk_UlTZHu6FHkXUIHe_QS5-6UEllDLC0LAcBVJotkr4kT8eEclcoS_4
+
+HTTp
+
+https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/http_basics.html?fbclid=IwAR2WBebon0rpVC8Sn9x3086fDismYXf5Vhk4EIS9l2K-Kb7_sPQcSUvCRRk
+
+
+Java Servlet
+
+https://www.baeldung.com/intro-to-servlets?fbclid=IwAR2WBebon0rpVC8Sn9x3086fDismYXf5Vhk4EIS9l2K-Kb7_sPQcSUvCRRk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

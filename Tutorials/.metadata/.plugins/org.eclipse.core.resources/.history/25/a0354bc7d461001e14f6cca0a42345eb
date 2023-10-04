@@ -1,0 +1,2 @@
+catalog.name = Our Catalog;
+management.endpoints.web.exposure.include=*

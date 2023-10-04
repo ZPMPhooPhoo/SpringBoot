@@ -1,0 +1,8 @@
+package com.turingjavaee7.demo.sevice.impl;
+
+public class ExampleBean {
+	public void api()
+	{
+		
+	}
+}

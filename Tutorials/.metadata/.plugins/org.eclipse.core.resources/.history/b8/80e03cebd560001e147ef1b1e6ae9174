@@ -1,0 +1,99 @@
+package com.turingjavaee7.demo.controller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.turingjavaee7.demo.sevice.ArithmeticService;
+import com.turingjavaee7.demo.sevice.impl.ExampleBean;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+public class HomeController {
+	private static final Logger log = LoggerFactory.getLogger(HomeController.class);
+	/*Test1
+	@Autowired
+	ArithmeticService arithService;
+	
+	@GetMapping("/")
+	String home()
+	{
+//		log.info("Get /");
+		log.info("Get/" + arithService.add(1, 2));
+		return "home";
+	}
+	*/
+	
+
+	/*Test2__Singleton
+	@Autowired
+	ExampleBean exampleBean;
+	public HomeController() {
+		log.info("Home Controller created");
+	}
+	*/
+	
+	
+	/*Test3__ConstructorBasedInjection*/
+	public HomeController(ExampleBean exampleBean) {
+		log.info("Home Controller created");
+	}
+	
+	
+	
+	/*Test4__SetterBasedInjection
+	 private ArithmeticService arithmeticService;
+	 public void setArithmeticService(ArithmeticService arithService)
+	 {
+//		 log.info("Setter injected for Arithmetic Service");
+		 System.out.println("Setter injected for Arithmetic Service");
+		 this.arithmeticService = arithService;
+	 }
+	 @GetMapping("/")
+		String home()
+		{
+//			log.info("Get /");
+			System.out.println("Get/" + arithmeticService.add(1, 2));
+			return "home";
+		}
+		*/
+	
+	
+	/*Test5__DependencyResolutionProcess
+	@Autowired
+	@Qualifier("arithTwo")
+	private ArithmeticService arithmeticService;
+	
+	@GetMapping("/")
+	String home()
+	{
+//		log.info("Get /");
+		System.out.println("Get/" + arithmeticService.add(1, 2));
+		return "home";
+	}
+	 */
+	
+	/*Test6__BeanScope
+	int a;
+	public HomeController(ExampleBean exampleBean) {
+		log.info("Home Controller created");
+	}
+	@GetMapping("/")
+	String home()
+	{
+		log.info("Home Controller /" + this.a);
+		a++;
+		try {
+			Thread.sleep(1000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return "home";
+	}
+	*/
+}

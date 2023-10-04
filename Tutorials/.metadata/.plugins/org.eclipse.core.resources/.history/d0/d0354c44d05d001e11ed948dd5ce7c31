@@ -1,0 +1,23 @@
+package com.turingjavaee7.demo.sevice.impl;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import com.turingjavaee7.demo.sevice.ArithmeticService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Service
+@Qualifier
+public class ArithmeticServiceImplTwo implements ArithmeticService{
+	ArithmeticServiceImplTwo()
+	{
+//		log.info("Arithmetic Service Impl Created");
+		System.out.println("Arithmetic Service Impl Created");
+	}
+	@Override
+	public int add(int a, int b) {
+		return a+b;
+	}
+}

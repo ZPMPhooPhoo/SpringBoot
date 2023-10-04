@@ -1,0 +1,51 @@
+Constructor Injection (based on parameter)
+public ExampleBean(){
+
+}
+
+Setter Injection
+
+ApplicationContext-> Spring Container
+
+mostly used Annotation
+
+circular dependency => A->B->C->A
+Sterotype => Component, Controller, Service, Configuration, Respository
+
+single bean, but 2 were found
+
+@Qualifier("arithTwo")
+
+bean scope => Specify create time and destroy time
+
+Singleton => Controller use for every request/ default
+HomeController@39c7e1ce
+
+Prototype Scope => When other bean reference
+
+Request Scope => http://localhost:8080/scopes/request
+every request => create bean
+Controller => Resource
+Bean => RequestScope
+
+
+Session => http://localhost:8080/shop/addToCart?item=Apple
+same browser, same machine, same user session
+every tab => value same
+ShoppingCart
+no more created in same session
+
+useful in WebApplication not in WebApi
+
+Day4 Installer and Website
+
+Maven Library
+
+https://mvnrepository.com/?fbclid=IwAR1WK9dA0X9oGgpdLGo_RfoDRSxmoeEwhHdMfHsOJpuxGBdjRosJYKIfaQA
+
+Spring Github
+
+https://github.com/spring-projects/spring-framework/blob/main/spring-context/src/main/java/org/springframework/context/ApplicationContext.java?fbclid=IwAR175sU9L7jK9bKIMDB31FFSwiEanZs6LLrrsUrmZ4HsuchtF-mXgu6OGtE
+
+Jmeter
+https://jmeter.apache.org/

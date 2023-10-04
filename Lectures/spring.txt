@@ -1,0 +1,18 @@
+Turing JavaEE 5th Batch
+Course Outline
+★Spring IoC Container,Dependency Injection
+★Spring MVC
+★Spring Boot
+★Spring MVC Architecture and Overview
+★Aspect-oriented Programming with Spring (AOP)
+★Spring Security
+★Spring and Web Services(REST)
+★Spring Data Access with JPA
+★Hibernate
+★Unit Testing with Spring
+★TypeScript.
+★Angular.
+★Reactive Programming with Angular & Spring.
+★Refactoring.
+★Angular ကတော့ CRUD , Form handling, Routing, REST အစရှိတာတွေပါပါမယ်။
+fullstack programming ပုံစံမျိုးဖြစ်ပါမယ်။
