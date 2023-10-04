@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;TuringJavaEE5thBatch-main&apos;" deleteContents="false" description="Delete resource &apos;TuringJavaEE5thBatch-main&apos;" element1="/TuringJavaEE5thBatch-main" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1696390116881"/>
+</session>

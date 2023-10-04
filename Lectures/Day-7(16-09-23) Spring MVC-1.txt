@@ -1,0 +1,14 @@
+
+https://www.youtube.com/watch?v=Av8ugZKv0Js&t=73s
+
+
+Web MVC
+User
+/request
+/controller
+hello
+->view resolver
+template thyleaf
+/static/template/hello.html
+
+more than 1controller/ view share

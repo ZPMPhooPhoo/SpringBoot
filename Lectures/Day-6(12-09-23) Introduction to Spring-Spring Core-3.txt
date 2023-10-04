@@ -1,0 +1,101 @@
+WebMVC
+Imperative
+Synchronous
+Request per thread
+
+WebFlux
+Functional
+Nonblocking,Asynchronous
+Event Loop model.
+
+Webflux is similarly nodejs but webflux is functional programming.
+
+DispatcherServlet => Frontend Controller Pattern(Controller, routes) app.xml Configer
+
+WebMVC-> embedded tomcat
+
+server.tomcat.accesslog.enabled=true
+server.tomcat.basedir=C:/temp/tomcatlog
+
+AppConfig, SecurityConfig, AuthConfig
+
+
+@EnableAutoConfiguration or @SpringBootApplication annotations to one of your @Configuration classes.
+
+spring-boot-devtools => for hot reload, don't use in production
+
+spring.devtools.restart.exclude=static/**,public/**
+spring.devtools.restart.enabled=false
+
+Externalized Configuration
+url, database name, pwd
+profile => uat, production,sit (system integration and test) third party
+environment vartiables => @Value
+Value => @Value("${catalog.name}") String catalog; in controller
+
+application.properties
+application.yaml=> yaml format
+
+eg => environments:
+	dev:
+	  url: "https://dev.example.com"
+	  name: "Developer Setup"
+	prod:
+	  url: "https://another.example.com"
+	  name: "My Cool App"
+
+spring.profiles.active=dev
+
+logging.file.path=C:/temp/tomcat/applog
+logging.level.org.springframework.web=debug
+logging.level.org.springframework.web=info
+logging.level.org.springframework=debug
+
+Internationalization, i18n
+
+@Controller, 
+return view
+@RestController => for RestApi
+return json format
+
+
+Can write api in Controller with @ResponseBody
+
+spring-boot-starter-web => @EnableWebMvc
+
+ContentNegotiatingViewResolver (eg jsp...)
+Support for serving static resources(html, css, js, image...)
+
+http://localhost:8080/search?query=hello
+
+HttpMessageConverters, MessageCodesResolver, RequestMappingHandlerMapping, RequestMappingHandlerAdapter, ExceptionHandlerExceptionResolver => auto configure
+
+favicon.ico
+
+Content-Type:
+text/html
+application.json
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

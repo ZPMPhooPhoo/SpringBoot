@@ -47,7 +47,7 @@ Consider marking one of the beans as @Primary, or using @Qualifier to identify t
 
 @Resource(name = ......)
 
-Value
+Value => @Value("${catalog.name}") String catalog; in controller
 
 @ComponentScan(basePackages = "org.example")
 
