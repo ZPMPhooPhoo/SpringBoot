@@ -1,0 +1,4 @@
+<html>
+	<h2>Hello Controller</h2>
+	<p th:text="${message}">placeholder message</p>
+</html>

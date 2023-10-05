@@ -12,3 +12,50 @@ template thyleaf
 /static/template/hello.html
 
 more than 1controller/ view share
+
+controller path/ method/ path variable
+
+@PathVariable => http://localhost:8080/mvc/books/2
+
+@RequestParam => http://localhost:8080/mvc/books/search?title=Java
+
+Presentation Layer => View, Controller (Input Request)
+Business Layer => @Service => Service, ServiceImpl, 
+Persistence Layer => @Repository => Dao, DaoImpl
+Database Layer
+Communication between the layers is from top to bottom.
+
+Controller->DTO(Data Transfer Object)->Service->Entity->Repository
+DAO(Data Access Object) => add Database
+Wired by Interface
+
+Repository => save, delete, edit
+Form Parameter
+
+inheritance
+interface interface-> different taxonomy
+
+interface Flyable
+{
+	fly();
+}
+class Bird implements Flyable
+{
+	void fly();
+}
+
+class Aeroplane implements Flyable (extends Bird)
+{
+	void fly();
+}
+
+
+Day7 installer and website
+
+spring mvc webflux
+
+https://www.amazon.com/Pro-Spring-MVC-WebFlux-Development/dp/1484256654?fbclid=IwAR2HQptyQDurReooFv1GjvmmXrT8sBh3tJTm3dCofD3D14ZlEQVQuvwE2Ns
+
+layered architecture
+
+https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html?fbclid=IwAR2vZz0ZKFxzON_ry_SWZ1XQNGPWmYwEtpR9BaPiyfTEjGvtVsvsDfZ9dAk

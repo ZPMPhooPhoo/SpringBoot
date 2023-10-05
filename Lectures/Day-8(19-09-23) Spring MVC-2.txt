@@ -1,0 +1,24 @@
+multipart.MultipartRequest => file upload
+
+use produces
+
+@GetMapping("/books/session")
+	String session(HttpSession session)
+	{
+		session.setAttribute("message", "Put by session");
+		return "hello";
+	}
+@GetMapping("/books/getSession")
+	String getSession(Model model,HttpSession session)
+	{
+		model.addAttribute("message", session.getAttribute("message"));
+		return "hello";
+	}
+PathVariable is better than RequestParam for SEO.
+
+Web MVC => GET/POST
+get -> empty form
+post-> form submit
+
+
+Login

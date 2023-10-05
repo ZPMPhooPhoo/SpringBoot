@@ -1,0 +1,3 @@
+if(username.equals("admin")&& password.equals("password"))
+
+if("admin".equals(username)&& "admin".equals(password)) => This is prevent null pointer exception (to avoid invalid input)

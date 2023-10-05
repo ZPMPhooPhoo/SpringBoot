@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Hello</title>
+  </head>
+ <body>
+    <h2>Hello Controller</h2>
+	<p th:text="${message}">placeholder message</p>
+	<form>
+		<button>Submit</button>
+	</form>
+  </body>
+</html>

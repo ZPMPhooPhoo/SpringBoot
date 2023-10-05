@@ -1,0 +1,24 @@
+package com.turingjavaee7.demo.dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.turingjavaee7.demo.model.Book;
+
+@Repository
+public class BookDaoImpl implements BookDao {
+
+	@Override
+	public List<Book> getAllBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Book getBookById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
