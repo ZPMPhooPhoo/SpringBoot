@@ -1,0 +1,42 @@
+BOOK CRUD
+
+bootstrap
+
+spring-boot-starter-validation
+
+custom validator => supports, validate
+
+supports mean validate concern with book
+
+controller => binder.setValidator(new BookValidator());
+
+BindingResult
+
+'required.book.id' for locale 'en_US'
+
+add localeResolver Bean in AppConfig => implements WebMvcConfigurer
+
+resources/ => messages.properties
+
+@NotBlank(message = "Id is mandatory") => hibernate Validator
+
+error message must be externalized
+
+
+
+
+
+
+Day10 Website
+
+bootstrap
+
+https://frontbackend.com/maven/artifact/org.webjars/bootstrap/5.3.2?fbclid=IwAR3n5cm34hw_kS9tL4ib5PSiqaCRJTceYRf0d6YIqXY-8l_CDK7ppJxW5aI
+
+bootstrap 
+<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+
+
+Java Bean Validation
+
+https://docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html?fbclid=IwAR2Id8CxMEXPSmwRVfIXVmkMqCXo7v-aPN-EA54WySKNvb_I_6fNBzUjvKY

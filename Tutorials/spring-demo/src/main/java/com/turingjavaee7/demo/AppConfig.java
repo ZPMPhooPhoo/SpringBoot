@@ -1,12 +1,19 @@
 package com.turingjavaee7.demo;
 
+import java.util.Locale;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.web.context.annotation.ApplicationScope;
 import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.context.annotation.SessionScope;
+import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 import com.turingjavaee7.demo.model.ShoppingCart;
 import com.turingjavaee7.demo.model.Store;
@@ -17,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Configuration
-public class AppConfig {
+public class AppConfig implements WebMvcConfigurer{
 	private static final Logger log = LoggerFactory.getLogger(SpringDemoApplication.class);
 	@Bean
 	public ExampleBean exampleBean()
@@ -60,5 +67,23 @@ public class AppConfig {
 	{
 		log.info("Integer store is created");
 		return new Store<Integer>();
+	}
+	
+	//for validation
+	
+	@Bean
+	public LocaleResolver lacaleResolver() {
+		SessionLocaleResolver slr = new SessionLocaleResolver();
+		slr.setDefaultLocale(Locale.US);
+		return slr;
+	}
+	
+	@Bean
+	public MessageSource messageSource() {
+		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+
+		messageSource.setBasename("classpath:messages");
+		messageSource.setDefaultEncoding("UTF-8");
+		return messageSource;
 	}
 }

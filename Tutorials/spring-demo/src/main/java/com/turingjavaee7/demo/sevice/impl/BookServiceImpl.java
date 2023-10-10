@@ -14,8 +14,9 @@ public class BookServiceImpl implements BookService{
 
 	@Autowired
 	BookDao bookDao;
+	
 	@Override
-	public List<Book> getAllBooks() {
+	public List<Book> getAllBook() {
 		return this.bookDao.getAllBooks();
 	}
 
@@ -23,5 +24,13 @@ public class BookServiceImpl implements BookService{
 	public Book getBookById(String id) {
 		return this.bookDao.getBookById(id);
 	}
+
+	@Override
+	public void saveBook(Book book) {
+		this.bookDao.saveBook(book);
+		
+	}
+
+	
 	
 }

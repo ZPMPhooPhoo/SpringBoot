@@ -1,3 +1,71 @@
 if(username.equals("admin")&& password.equals("password"))
 
 if("admin".equals(username)&& "admin".equals(password)) => This is prevent null pointer exception (to avoid invalid input)
+
+
+Form parameter variable -> backend bean object-> data binding
+
+
+@ModelAttribute
+every controller run, this category must consist
+at that time use model attribute
+run before controller run => prepopulate
+
+
+If you want to retreive data from model
+user method argument
+
+@ModelAttribute("books") List<Book> modelBooks => data binding
+no need to manually typecasting
+
+@SessionAttributes("cart")
+used at controller level
+
+
+Object-Graph Navigation Language
+
+cart get
+
+form submit ->1
+
+class Account
+{
+	String name;
+	String getName()
+	{
+	}
+}
+
+name = account.getName();
+
+view => ${account.name};
+
+
+Type Conversion
+form => username, password
+
+class User
+{
+	String username;
+	String password;
+}
+
+backend => @ModelAttribute User user;
+
+
+
+
+
+
+
+Documentation
+
+https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/modelattrib-method-args.html?fbclid=IwAR2jvA50eN8X8qWmsyZ13_suVA6uvXWmT_VQlKMozjNwH73nX0mhHOLdNUQ
+
+
+Spring EL
+
+https://docs.spring.io/spring-framework/docs/3.0.x/reference/expressions.html?fbclid=IwAR2SzIfErhc7nVQurwYMAkNrTARseJW7wX-DR0VLRtAR-6hRasBDRkW8aOw
+
+
+

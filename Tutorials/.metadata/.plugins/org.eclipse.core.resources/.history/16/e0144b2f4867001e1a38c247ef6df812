@@ -1,0 +1,24 @@
+package com.turingjavaee7.demo.validation;
+
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
+
+import com.turingjavaee7.demo.model.Book;
+
+public class BookValidator implements Validator {
+
+	@Override
+	public boolean supports(Class<?> clazz) {
+		return Book.class.isAssignableFrom(clazz);
+	}
+
+	@Override
+	public void validate(Object target, Errors errors) {
+		ValidationUtils.rejectIfEmpty(errors, "id", "Id is required", new Object[] {"id"});
+		ValidationUtils.rejectIfEmpty(errors, "title", "Title is required", new Object[] {"title"});
+		ValidationUtils.rejectIfEmpty(errors, "author", "Author is required", new Object[] {"author"});
+		
+	}
+
+}

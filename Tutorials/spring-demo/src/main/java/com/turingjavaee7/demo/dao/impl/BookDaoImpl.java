@@ -31,5 +31,11 @@ public class BookDaoImpl implements BookDao {
 		.collect(Collectors.toList())
 		.get(0);
 	}
+	
+	@Override
+	public void saveBook(Book book) {
+		this.books.add(book);
+		
+	}
 
 }

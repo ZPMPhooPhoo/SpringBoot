@@ -1,0 +1,11 @@
+#spring.profiles.active=dev
+catalog.name = Our Dev Catalog;
+
+management.endpoints.web.exposure.include=*
+management.endpoints.web.exposure.exclude=threaddump
+#management.endpoints.web.exposure.exclude=mappings
+
+server.tomcat.accesslog.enabled=true
+server.tomcat.basedir=C:/temp/tomcatlog
+logging.file.path=C:/temp/tomcat/applog
+logging.level.org.springframework.web=info

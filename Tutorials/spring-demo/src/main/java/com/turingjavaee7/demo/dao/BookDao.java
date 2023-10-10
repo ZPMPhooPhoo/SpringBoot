@@ -7,4 +7,5 @@ import com.turingjavaee7.demo.model.*;
 public interface BookDao {
 	List<Book> getAllBooks();
 	Book getBookById(String id);
+	void saveBook(Book book);
 }

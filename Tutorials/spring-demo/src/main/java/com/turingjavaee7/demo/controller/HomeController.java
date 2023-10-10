@@ -174,6 +174,8 @@ public class HomeController {
 		return "appScopedBean";
 	}
 	*/
+	
+	/*
 	@Value("${catalog.name}") String catalog;
 	@Autowired
 	Store<Integer> integerStore;
@@ -183,6 +185,7 @@ public class HomeController {
 		log.info("Catalog "+catalog);
 		return "home";
 	}
+	*/
 	
 	@GetMapping("/api")
 	@ResponseBody ShoppingCart getShoppingCart()
