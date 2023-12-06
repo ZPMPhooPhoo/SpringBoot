@@ -6,7 +6,11 @@
     <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css} "/>
   </head>
  <body>
+	 Locale<div th:text="${#locale}"></div>
     <h2>Book</h2>
+    <a class="btn btn-primary" th:href="@{/books/new}">
+		New
+	</a>
 	<table class = "table table-stripped">
 		<thead>
 			<tr>

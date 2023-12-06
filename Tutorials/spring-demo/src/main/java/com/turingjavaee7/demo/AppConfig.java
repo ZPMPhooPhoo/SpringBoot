@@ -11,8 +11,11 @@ import org.springframework.context.support.ReloadableResourceBundleMessageSource
 import org.springframework.web.context.annotation.ApplicationScope;
 import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.context.annotation.SessionScope;
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 import com.turingjavaee7.demo.model.ShoppingCart;
@@ -85,5 +88,20 @@ public class AppConfig implements WebMvcConfigurer{
 		messageSource.setBasename("classpath:messages");
 		messageSource.setDefaultEncoding("UTF-8");
 		return messageSource;
+	}
+	
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(localeChangeInterceptor());
+		// registry.addWebRequestInterceptor(customInterceptor()).addPathPatterns("/books/**");
+		// registry.addInterceptor(logInterceptor()).addPathPatterns("/admin/**");
+	}
+
+	@Bean
+	public HandlerInterceptor localeChangeInterceptor() {
+		LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
+		localeChangeInterceptor.setParamName("lang");
+
+		return localeChangeInterceptor;
 	}
 }

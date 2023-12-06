@@ -1,1 +1,41 @@
 Edit 
+
+Cross Cutting Concerns
+business logic
+security
+logging
+performance
+
+security
+{
+
+}
+
+@security
+controller
+{
+
+}
+
+com.turing.controller.*
+
+middleware
+	-> controller
+
+---Spring---
+//dynamic code
+controller
+
+Dispatcher Servlet
+filter1->JWT
+filter2->Logging
+filter3->Authorization
+Controller
+
+intersector power
+for every request
+1.preHandle
+2.postHandle
+3.afterCompletion
+
+it is better IntersectorRegistry
