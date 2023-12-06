@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;newBook.html&apos; to &apos;books&apos;&#x0D;&#x0A;- Original project: &apos;spring-demo&apos;&#x0D;&#x0A;- Destination element: &apos;books&apos;&#x0D;&#x0A;- Original element: &apos;newBook.html&apos;" description="Copy file" element1="src/main/resources/templates/books/newBook.html" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1697451455273" target="/spring-demo/src/main/resources/templates/books" units="0" version="1.0"/>
+</session>

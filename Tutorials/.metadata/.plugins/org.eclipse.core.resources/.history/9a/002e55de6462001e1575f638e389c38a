@@ -1,4 +1,0 @@
-catalog.name = Our Catalog;
-management.endpoints.web.exposure.include=*
-management.endpoints.web.exposure.exclude=threaddump
-#management.endpoints.web.exposure.exclude=mappings

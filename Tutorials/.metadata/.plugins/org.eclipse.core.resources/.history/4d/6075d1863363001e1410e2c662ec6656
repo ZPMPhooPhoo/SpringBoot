@@ -1,7 +1,0 @@
-package com.turingjavaee7.demo.sevice.impl;
-
-import com.turingjavaee7.demo.sevice.BookService;
-
-public class BookServiceImpl implements BookService{
-
-}
