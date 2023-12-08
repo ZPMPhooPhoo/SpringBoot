@@ -1,0 +1,39 @@
+category
+
+Interceptor
+
+
+App.Config 
+add bean for WebRequestInterceptor
+
+http://localhost:8000/admin?username=admin&password=admin
+
+Interceptor power?
+Request မလာခင် လုပ်တဲ့ဟာကို  interceptor လို့‌ခေါ်တယ်
+
+request ->
+	filter
+		LogFilter
+			throw Auth
+				403
+				/error/403.html
+
+For Generic Exception, null pointer exception => should use ControllerAdvice
+
+
+request->
+controller
+service => DuplicateUser
+dao => SqlException
+
+SqlException shouldn't we catch with ControllerAdvice.
+
+Exception => 1. throw, 2. manage
+
+Day 12 Website
+
+https://reflectoring.io/spring-boot-exception-handling/?fbclid=IwAR368MPbaZm0_stlQAsxsa_Hw1MgnUoCFmBPsGnljLN-plNF71yrBwZhbCA
+
+
+
+

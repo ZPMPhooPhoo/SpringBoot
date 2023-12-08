@@ -1,4 +1,4 @@
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="org.springframework.validation.Validator"><rhs name\="com.turingjavaee7.demo.validation.BookValidator"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.Locale"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="org.springframework.validation.Validator"><rhs name\="com.turingjavaee7.demo.validation.BookValidator"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.Locale"/></lhs><lhs name\="org.springframework.web.servlet.HandlerInterceptor"><rhs name\="com.turingjavaee7.demo.interceptor.LogInterceptor"/></lhs></history>
 content_assist_number_of_computers=15
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0

@@ -1,0 +1,4 @@
+JavaRMI
+SOAP
+same language
+RMI Protocol

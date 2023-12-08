@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.turingjavaee7.demo.model.Book;
+import com.turingjavaee7.demo.sevice.AuthenticationException;
 import com.turingjavaee7.demo.sevice.BookService;
 import com.turingjavaee7.demo.validation.BookValidator;
 
@@ -174,6 +176,21 @@ public class BookController {
 		this.bookService.deleteBookById(id);
 		
 		return "redirect:/books";
+	}
+	
+	@GetMapping("/error")
+	String error(Model model)throws AuthenticationException
+	{
+		throw new AuthenticationException("You got auth excep");
+		
+		
+		//return "/books/cart";
+	}
+	@ExceptionHandler(AuthenticationException.class)
+	public String authException()
+	{
+		log.info("Got auth exception by @ExceptionHandler");
+		return "/error/403";
 	}
 	
 }
