@@ -1,0 +1,106 @@
+JavaRMI
+SOAP(Simple Object Access Protocol)
+same language
+RMI Protocol
+
+AJAX (Before Rest)
+Asynchronous JavaScript and XML
+
+const req = new XMLHttpRequest();
+req.addEventListener("load", ()=>console.log('loaded'));
+req.open("GET", "https://www.google.com/robots.txt");
+req.send();
+
+Ajax means synchronously request to server with http protocol and carry data and then dynamically render.
+
+REpresentational State Transfer (REST)
+
+REST API => https://jsonplaceholder.typicode.com/todos?fbclid=IwAR0VicDz5jfJC4aRMqWKEx3OeEpPa9hcrJ0XsRtBEh9HddtXyn8olCJiF-c
+
+Any language can use REST API cause of depends on http protocol.
+
+graphQL is better than REST. It is return only you want data.
+
+GET /api/books
+GET /api/books/id
+
+PUt /api/books/1013 => the whole
+PATCH /api/books/1013 => the partial
+
+POST => action
+POST /api/books
+body{
+
+}
+
+DELETE /api/books/122
+
+C ->POST
+R ->GET
+U ->PUT
+D ->DELETE
+
+Rest Api Guideline
+
+version should used
+
+URLs longer than 2,083
+
+Idempotent means api repeatedly like GET
+Don't action in GET mehod cause of Idempotent
+POST and PATCH are not idempotatnt
+
+status code
+2->success
+200->OK
+200->login
+
+201->create->success
+201->register
+
+301->redirect (it is not use in rest api)
+
+400->client error (validation)
+400->Bad request
+
+401->authentication
+401->invalid user
+
+403->Authorization
+402->Payment
+404->Not found
+405->Method not allowed
+406->
+408->Request Timeout
+409->Conflict
+410->if delete and then repeat delete
+
+500->Internal Server error
+502->Bad Gateway
+503->Service Unavailable(Microservice busy and overload)
+504->Gateway Timeout
+
+Use Standard Header
+
+Content-Type => application/json
+
+GET
+parameter
+HTTP request header
+
+Do not use Get for sensitive data => such as username, password
+
+UseStandard error response
+
+
+
+Day13 Website
+
+SOAP
+https://www.ibm.com/docs/en/sc-and-ds/8.1.0?topic=stack-simple-object-access-protocol&fbclid=IwAR2T0IGmTsyB--V1XShyLhVhbTgqNuHf-W6qHkBbbhoLrf-zmIU6gTtiCV4
+
+api guidelines
+https://github.com/microsoft/api-guidelines?fbclid=IwAR0OwGO5miD_-rzpY1EBSF2wQzGQP4Vh7HVOqlc317zFw9S7jqNCLC0dAto
+
+status code
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status?fbclid=IwAR2sb9mYqQU-WSnYo73pSzwGpH_j4LoJd0AuBx6ULS2cVcMW1JGxD04yqho#information_responses
