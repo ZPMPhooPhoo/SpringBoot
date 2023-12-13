@@ -209,4 +209,10 @@ public class HomeController {
 		return "hello";
 	}
 	
+	@GetMapping("/throw")
+	String throwException() throws Exception
+	{
+		throw new Exception("Just throw");
+	}
+	
 }

@@ -9,5 +9,5 @@ public interface BookDao {
 	Book getBookById(String id);
 	Book saveBook(Book book);
 	Book updateBook(Book book);
-	void deleteBookById(String id);
+	Book deleteBookById(String id);
 }

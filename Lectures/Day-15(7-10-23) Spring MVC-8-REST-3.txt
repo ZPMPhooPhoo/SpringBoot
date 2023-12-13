@@ -1,0 +1,33 @@
+AOP
+CrossCuttingConcern
+Filter
+HandlerAdapter
+
+AOP => byte buddy
+Gravall
+
+PointCut => It is point target file
+
+Application performance monitoring (APM)
+
+within(com.xyz.web..*)
+
+execution vs within
+
+
+
+
+
+Day15 Website
+
+https://spring.io/guides/tutorials/rest/?fbclid=IwAR1UfaUEHWWJ7a4fkfXFk_uk4OJduRKb6kdOCjBd1lrpZZhvLAEUb8yldKU
+
+AOP
+https://docs.spring.io/spring-framework/docs/2.5.5/reference/aop.html?fbclid=IwAR1ea5AWdlsDO-n6xQIwzpxZci4u2wTLShUKVDL6vTTn3tJ9Dve8PHIFSmI
+
+https://docs.spring.io/spring-framework/reference/core/aop.html?fbclid=IwAR34mXPVjKmwq6ffboWKlHhmuq7oUzV_2cR4e_P27N3w6S2tpPxowPlcIsQ
+
+GraalVM
+https://github.com/spring-projects/spring-boot/issues/33865?fbclid=IwAR3vPVEwN1hL8Z2J1LV3cJRCP8jXNrohJhdN0R-1r-Nd2PqEARsOvFPMg_o
+
+https://reflectoring.io/aop-spring/?fbclid=IwAR1pUDTnztBIX8ZQjUoj3Urxn9AZ-Z2ZtYyMMiNXWPPR89nBhipwl8LgE0g
