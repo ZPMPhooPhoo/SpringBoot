@@ -1,0 +1,26 @@
+package com.turingjavaee7.demo.controller.rest;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.turingjavaee7.demo.model.Book;
+import com.turingjavaee7.demo.sevice.BookService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+@RequestMapping("/api/books")
+public class BookApiController {
+
+	@Autowired
+	BookService bookService;
+	
+	List<Book> getAllBook()
+	{
+		return this.bookService.getAllBook();
+	}
+}

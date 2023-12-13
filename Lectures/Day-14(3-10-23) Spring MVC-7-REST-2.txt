@@ -1,0 +1,96 @@
+Filter
+Pagination
+Server Response => Server Driven is better than Client Driven
+Empty Response => []
+DateTime => use miliseconds
+Version => For mobile, For Web...
+Major.Minor
+1.0
+2.0
+3.0
+
+1.0
+1.1
+1.2
+
+microservice
+1sec -100 (how to know => test with Jmeter)
+
+1sec - 120
+100
+20 failed
+
+In api not totally unavailable, some of request available that's called Rate limiting.
+
+User accept in 3second server response.
+
+429 is too many requests.
+503 Service unavailable
+birthDate
+
+
+@Controller	vs	@RestController
+@ResponseBody
+
+Add Environment in Postman cause of to connect api
+
+For error message use ResponseEntity 
+
+Create Book
+Body => Raw
+{
+    "id": "three",
+    "title": "three",
+    "author": "three"
+}
+
+Content-Type => application/json (Unsupported Media Type Error)
+(@RequestBody Book book)
+
+postman => View => Show postman console
+
+reverse proxy => single domain name->different IP
+
+form data
+key
+value
+
+Validation must be fully enforced at server
+
+Never trust user input
+
+@Valid
+JSR validation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Website
+Postman
+https://www.postman.com/?fbclid=IwAR0Pw1-K65cKFPC8kyl3EWYTW6VYXpLbedeHwOBURPCQkAo-d4a2bdOkPFY
+
+
+
+
+
