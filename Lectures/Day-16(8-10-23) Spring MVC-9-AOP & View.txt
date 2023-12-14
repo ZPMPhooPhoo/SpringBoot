@@ -1,0 +1,10 @@
+topup(1000)
+{
+core banking account
+debit(1000)
+buy ooredoo api (1000)->http Exception
+}
+
+Views
+SAP-> React, Angular
+View Resolvers

@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,9 +24,11 @@ import com.turingjavaee7.demo.interceptor.CustomInterceptor;
 import com.turingjavaee7.demo.interceptor.LogInterceptor;
 import com.turingjavaee7.demo.model.ShoppingCart;
 import com.turingjavaee7.demo.model.Store;
+import com.turingjavaee7.demo.servlet.HelloWorldServlet;
 import com.turingjavaee7.demo.sevice.impl.ExampleBean;
 import com.turingjavaee7.demo.sevice.impl.HelloMessageGenerator;
 
+import jakarta.servlet.http.HttpServlet;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -96,8 +99,8 @@ public class AppConfig implements WebMvcConfigurer{
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(localeChangeInterceptor());
-		 registry.addWebRequestInterceptor(customInterceptor()).addPathPatterns("/books/**");
-		 registry.addInterceptor(logInterceptor()).addPathPatterns("/admin/**");
+//		registry.addWebRequestInterceptor(customInterceptor()).addPathPatterns("/books/**");
+//		registry.addInterceptor(logInterceptor()).addPathPatterns("/admin/**");
 	}
 
 	@Bean
@@ -119,5 +122,14 @@ public class AppConfig implements WebMvcConfigurer{
 	public HandlerInterceptor logInterceptor()
 	{
 		return new LogInterceptor();
+	}
+	
+	@Bean
+	public ServletRegistrationBean<HttpServlet> helloServlet() {
+		ServletRegistrationBean<HttpServlet> servRegBean = new ServletRegistrationBean<>();
+		servRegBean.setServlet(new HelloWorldServlet());
+		servRegBean.addUrlMappings("/helloservlet/*");
+		servRegBean.setLoadOnStartup(1);
+		return servRegBean;
 	}
 }
