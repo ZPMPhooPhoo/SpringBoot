@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Home</title>
+  </head>
+ <body>
+    <h1>View Index...</h1>
+    <div>
+		Variable from Controller
+		<p th:text="${message}">place holder</p>
+	</div>
+    Message <p th:text="@{view.greeting}"></p>
+  </body>
+</html>

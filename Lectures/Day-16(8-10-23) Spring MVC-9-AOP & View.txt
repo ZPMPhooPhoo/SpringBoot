@@ -8,3 +8,26 @@ buy ooredoo api (1000)->http Exception
 Views
 SAP-> React, Angular
 View Resolvers
+
+DispatcherServlet is a root servlet and then go to controller respectively. This is Frontend controller pattern.
+
+servlet -> jsp -> Tiles -> jsf -> Thymeleaf3 and Mustache
+
+If you want to run jsp add dependency 
+<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+
+and add jstl dependency 
+
+jstl is third library.(Jakarta Standard Tag Library)
+
+/WEB-INF/jsp/
+
+application.propoerties => /WEB-INF/jsp/
+			   .jsp
+
+Best practice-just use 1view
+
+small project->replicate issue

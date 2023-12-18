@@ -1,0 +1,7 @@
+MVC-> REST+SPA
+
+Thymeleaf support HTML, XML, JavaScript, CSS, and even plain text
+
+label, content, message => message.properties
+
+feature.subfeature

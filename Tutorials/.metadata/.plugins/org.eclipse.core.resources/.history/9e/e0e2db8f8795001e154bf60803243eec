@@ -1,5 +1,0 @@
-package com.turingjavaee7.demo.interceptor;
-
-public class CustomInterceptor implements webRequestInterceptor{
-
-}
