@@ -14,7 +14,7 @@ public class Book {
 	
 //	@NotBlank(message = "Id is mandatory")
 	@NotBlank(message = "{required.book.id}")
-	String id;
+	Long id;
 	
 	@NotBlank(message = "Title is mandatory")
 //	@Size(min = 3, max = 100, message = " Title must between 3 and 100 characters")

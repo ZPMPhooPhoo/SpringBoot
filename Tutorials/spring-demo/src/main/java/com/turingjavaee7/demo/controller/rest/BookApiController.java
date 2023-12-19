@@ -59,7 +59,7 @@ public class BookApiController {
 	
 	@GetMapping("/{bookId}")
 	//Book getBookById(@PathVariable String bookId)
-	ResponseEntity<Object> getBookById(@PathVariable String bookId)
+	ResponseEntity<Object> getBookById(@PathVariable Long bookId)
 	{
 		log.info("GET /api/books/"+bookId);
 		Book book = null;
@@ -110,7 +110,7 @@ public class BookApiController {
 	}
 	
 	@DeleteMapping("/{bookId}")
-	ResponseEntity<Object> deleteBook(@PathVariable String bookId)
+	ResponseEntity<Object> deleteBook(@PathVariable Long bookId)
 	{
 		log.info("Delete book id "+bookId+"  ");
 		Book deletedBook;

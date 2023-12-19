@@ -1,0 +1,6 @@
+JPA
+	Specification
+	implementation (Hibernate)
+
+long-Primitive (not null allow)
+Long->Wrapper

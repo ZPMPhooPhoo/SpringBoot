@@ -1,0 +1,123 @@
+Controller
+	Service
+	DAO
+
+DAO Layer => Data Access Object (Repository Layer) (Persistence)
+RDBMS (Relational Database Management System)
+	MySQL
+	Oracle
+	MSSQL
+ORM (Object Relational Mapping)
+	JPA
+	Hibernate
+
+
+RDBMS => transaction data (no scalable)
+	 work with row, table, and same schema
+Scaling means handle many users, transactions such as bank
+
+Scaling 
+	Horizontal => Computer, Process
+	Vertical   => add memory...(high ability)
+
+NOSQL => Not Only SQL(MongoDB)
+	save data with json
+	Different Schema or Flexible Schema
+	document databases(json)
+	key value database
+	graph database (google map)
+
+persistence store => harddisk (slow)
+memory store => redis, mcash
+
+Reactive Programming should use MongoDB
+Webflux programming use synchronous programming
+
+MySQLDriver
+OracleDriver
+
+Connection
+	MySQLConnection
+	OracleConnection
+
+JDBC => all database connet (java database connectivity)
+
+ORM -> JDBC -> Driver
+
+ACID
+
+send Money(Account A => B ,200)
+
+Account A
+500
+Account B
+500
+--------------------------
+Account A
+300
+Account B
+700
+
+A = A - 200;
+UPDATE A SET A = A - 200;
+B = B + 200;
+UPDATE B SET B = B + 200;
+
+Atomicity => All or Nothing (Both UPDATE A SET A = A - 200; UPDATE B SET B = B + 200;)
+Consistency => 2 account = 1000
+
+Isolaiton
+send Money(Account A => B ,200)
+send Money(Account A => C ,200)
+
+A = A - 200;
+UPDATE A SET A = A - 200;
+B = B + 200;
+UPDATE B SET B = B + 200;
+A = A - 200;
+UPDATE A SET A = A - 200;
+C = C + 200;
+UPDATE C SET C = C + 200;
+
+T1
+A = 500;
+A = 300;
+T2 = 500 - 200;
+T2 = 300;
+
+Cause of Concurrency Issue => So you should do Mutual Exclusion
+This is so called isolation. If do isolation need Lock like toilet.
+
+Durability
+if success persistence must success.
+
+Consistency က
+before နဲ့ after
+balance ဖြစ်ရမယ်
+
+row တစ်ခုကို lock ချထားတဲ့ အချိန်မှာ စောင့်နေတဲ့ second transaction က ပထမ transcation မပြီးမချင်းစောင့်နေရ
+
+Transaction Timeout exception
+
+
+
+Website
+DAO
+https://www.oracle.com/java/technologies/data-access-object.html?fbclid=IwAR2VAEzlV5xjSLaLKo-rGBityFx-4TTnndlYXm6oH9wYzr7uYnq6sMaicPk
+
+https://www.manning.com/books/spring-in-action-fifth-edition?fbclid=IwAR30KRFsm7KyaN-0yA2aKymW6xafnTUI_8vWC6XtX0EFqQw7L199dYa3aj4
+
+MongoDB
+https://www.mongodb.com/nosql-explained?fbclid=IwAR2ISbGDAMsYPnTAEvr_Lp1Hjhy64CSuheFX5FTU2wR9tKhFA4JFV3w-4k0
+
+Redis
+https://redis.com/nosql/key-value-databases/?fbclid=IwAR0sFxB4laUxsg6m8g7kv6MIGXEOoqlhcWwcGNokPsz-OX6-51WYej9DdI8
+
+R2DBC
+https://r2dbc.io/?fbclid=IwAR1PWVsWOgKOgkZewYIuU2WowmTnr2MVd8RyRAQ-QW-EQhiIpdDH7DvNuHo
+
+https://saumyasingh98.medium.com/paper-review-architecture-of-a-database-system-f0817012db13
+
+https://dev.mysql.com/doc/refman/8.0/en/execution-plan-information.html?fbclid=IwAR3KLz6gCxhzur13x01EW1QwCBjsAk0XNgIWz4Qp5VPRDReT6EqLRCloXyw
+
+https://spring.io/projects/spring-data?fbclid=IwAR3ZXBWGOz6-q28ev6MURMDNa_pBQYWPj2QLnOpA4Uz_Ux6Y-BV7B8KO40Q

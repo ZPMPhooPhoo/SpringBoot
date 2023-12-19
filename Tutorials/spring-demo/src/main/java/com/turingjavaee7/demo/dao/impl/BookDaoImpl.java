@@ -16,8 +16,8 @@ public class BookDaoImpl implements BookDao {
 	BookDaoImpl()
 	{
 		this.books = new ArrayList<Book>();
-		this.books.add(new Book("1", "Title 1", "Author 1"));
-		this.books.add(new Book("2", "Title 2", "Author 2"));
+		this.books.add(new Book(1L, "Title 1", "Author 1"));
+		this.books.add(new Book(2L, "Title 2", "Author 2"));
 	}
 	@Override
 	public List<Book> getAllBooks() {
@@ -25,7 +25,7 @@ public class BookDaoImpl implements BookDao {
 	}
 
 	@Override
-	public Book getBookById(String id) {
+	public Book getBookById(Long id) {
 		return this.books.stream()
 		.filter(book->book.getId().equals(id))
 		.collect(Collectors.toList())
@@ -45,7 +45,7 @@ public class BookDaoImpl implements BookDao {
 		return originalBook;
 	}
 	@Override
-	public Book deleteBookById(String id) {
+	public Book deleteBookById(Long id) {
 		Book deletedBook = this.getBookById(id);
 		List<Book> books = this.books.stream()
 				.filter(book->!book.getId().equals(id))

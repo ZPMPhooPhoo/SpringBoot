@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <title>Home</title>
-  </head>
+  <header th:insert="fragments/header"></header>
  <body>
     <h1>View Index...</h1>
     <div>
-		Variable from Controller
-		<p th:text="${message}">place holder</p>
+		Variable from Controller 
+		<p th:text="${message}+' world'">place holder</p>
+		<p th:text="|The message is ${message}|">place holder</p>
+		
+		1+2
+		<p th:text="${1+2}">place holder</p>
+		<p th:text="${message.toUpperCase()}">place holder</p>
+		
 	</div>
-    Message <p th:text="@{view.greeting}"></p>
+	Expressions	
+	<ol>
+    	<li th:each="city : ${cities}">
+    		<span th:text="${city}"/>
+    	</li>
+    </ol>
+    Message
+    <p th:text="#{view.greeting}"></p>
+    Link
+    <img th:src="@{/images/apple.jpeg}"/>
   </body>
+  <footer th:insert="fragments/footer"></footer>
 </html>

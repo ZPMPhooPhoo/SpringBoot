@@ -5,3 +5,30 @@ Thymeleaf support HTML, XML, JavaScript, CSS, and even plain text
 label, content, message => message.properties
 
 feature.subfeature
+
+
+loop
+iterable
+expressions
+message
+link
+folder
+css, js, images
+layout fragment
+/resources/templates/fragments
+th:insert
+<header th:insert="fragments/header"></header>
+
+library script
+event handling script
+
+literals => +' world' (single quote)
+
+conditional in thymeleaf
+gender
+m- male
+f- female
+
+if/unless
+
+switch/case

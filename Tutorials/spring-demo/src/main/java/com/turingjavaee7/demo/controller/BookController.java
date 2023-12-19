@@ -74,7 +74,7 @@ public class BookController {
 	
 	@GetMapping("/{id}")
 	String getBookById(Model model,
-			@PathVariable String id,
+			@PathVariable Long id,
 			@ModelAttribute("category") List<String> category)
 	{
 //		List<Book> modelBooks = (ArrayList<Book>)model.getAttribute("books");
@@ -122,7 +122,7 @@ public class BookController {
 	String bookForm(Model model)
 	{
 		Book book = new Book();
-		book.setId("one");
+		book.setId(1L);
 		model.addAttribute("book", book);
 		return "/books/newBook";
 	}
@@ -144,7 +144,7 @@ public class BookController {
 	}
 	
 	@GetMapping("/edit/{id}")
-	String bookEditForm(Model model, @PathVariable String id)
+	String bookEditForm(Model model, @PathVariable Long id)
 	{
 		log.info("Edit book" + id);
 		Book book = this.bookService.getBookById(id);
@@ -171,7 +171,7 @@ public class BookController {
 	}
 	
 	@GetMapping("/delete/{id}")
-	String deleteBook(Model model,@PathVariable String id) throws BusinessLogicException
+	String deleteBook(Model model,@PathVariable Long id) throws BusinessLogicException
 	{
 		log.info("Delete book" +id);
 		this.bookService.deleteBookById(id);

@@ -22,7 +22,7 @@ public class BookServiceImpl implements BookService{
 	}
 
 	@Override
-	public Book getBookById(String id) {
+	public Book getBookById(Long id) {
 		return this.bookDao.getBookById(id);
 	}
 
@@ -39,7 +39,7 @@ public class BookServiceImpl implements BookService{
 	}
 
 	@Override
-	public Book deleteBookById(String id) throws BusinessLogicException {
+	public Book deleteBookById(Long id) throws BusinessLogicException {
 		try {
 			return this.bookDao.deleteBookById(id);
 		} catch (Exception e) {

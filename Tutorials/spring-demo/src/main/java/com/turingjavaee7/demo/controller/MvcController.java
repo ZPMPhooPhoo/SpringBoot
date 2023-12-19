@@ -89,13 +89,13 @@ public class MvcController {
 	@ResponseBody
 	Book getBook()
 	{
-		return new Book("id-1", "title-1", "author-1");
+		return new Book(1L, "title-1", "author-1");
 	}
 	
 	@GetMapping("/books/api2")
 	ResponseEntity<Book> getBook2()
 	{
-		return ResponseEntity.ok(new Book("id-2", "title-2", "author-2"));
+		return ResponseEntity.ok(new Book(2L, "title-2", "author-2"));
 	}
 	
 	@GetMapping("/books/request")
