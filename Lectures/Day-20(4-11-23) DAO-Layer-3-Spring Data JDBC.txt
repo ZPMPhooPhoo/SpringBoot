@@ -1,0 +1,57 @@
+RDBMS
+DB2
+H2
+HSQLDB
+MariaDB
+Microsoft SQL Server
+MySQL
+
+Relational
+	Synchronous => JDBC Driver (WebMVC)
+	Reactive Driver => R2DBC Driver (WebFlux)
+
+NoSQL
+
+WebStack
+	WebMVC
+		Synchronous
+		normal JDBC ,JPA
+	WebFlux
+		Reactive Driver
+		R2DBC
+
+synchronous model-> thread per request
+
+JPA is better than JDBC
+
+Java Persistence API (JPA)
+ORM
+Hibernate
+MyBatis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

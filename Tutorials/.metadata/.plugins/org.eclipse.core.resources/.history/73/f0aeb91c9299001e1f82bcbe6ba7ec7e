@@ -1,8 +1,0 @@
-package com.turingjavaee7.demo.sevice.exception;
-
-public class BusinessLogicException extends Exception{
-	BusinessLogicException(String message)
-	{
-		super(message);
-	}
-}

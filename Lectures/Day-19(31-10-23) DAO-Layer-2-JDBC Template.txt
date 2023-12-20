@@ -4,3 +4,74 @@ JPA
 
 long-Primitive (not null allow)
 Long->Wrapper
+
+MySQL workbench
+id => INT, PK, NN, AI
+title => varchar(255)
+author => varchar(255)
+
+Book.jav => implements Serializable (to save database and harddisk)
+must have serialVersionUID
+
+add dependency => spring-boot-starter-jdbc
+
+JDBC have Driver, MySQL, Oracle to connect  Database.
+
+mysql-connector-java -> Java Driver
+
+JDBC -> Driver -> Database
+
+check connectivity and credentials
+
+should use env variable
+
+Repository Layer => DAO Layer => @Autowired
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+
+SQL all capital
+
+row-> to Book model
+
+ResultSet
+
+mapRowToBook
+
+
+When data save without id and then controller have error
+So we should use
+DTO => Controller & Service
+Entity
+
+
+In DTO => BookDTO and In Service => Book
+
+JDBC template does not use connection pooling
+
+Connection Pooling => 
+1. DB Connection
+2. TCP Connection
+
+Application => 1 connection
+
+pool => (created, do not close)
+[
+	conn1,
+	conn2,
+	conn3
+]
+
+idle->active
+active-> idle
+
+JDBC => c3p0
+can configure poolsize
+how to. set parameter
+connection may be broken
+
+
+
+
+
+
+
