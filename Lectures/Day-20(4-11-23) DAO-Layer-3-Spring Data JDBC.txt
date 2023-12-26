@@ -29,6 +29,34 @@ ORM
 Hibernate
 MyBatis
 
+spring data jdbc
+spring data jpa 
+jpa is better than jdbc and more powerful.
+
+Java Persistence API (JPA)
+	ORM
+		Hibernate
+		MyBatis
+
+spring data jpa recommend
+
+
+spring-boot-starter-jdbc  VS spring-boot-starter-data-jdbc
+
+spring-boot-starter-data-jdbc => It can get connection pooloing
+
+DTO is a layer between Controller and Service
+
+Controller
+	DTO
+Service
+	Entity
+Repository
+
+
+ModelMapper => no need to create getter, setter
+ModelMapper modelMapper = new ModelMapper();
+
 
 
 
