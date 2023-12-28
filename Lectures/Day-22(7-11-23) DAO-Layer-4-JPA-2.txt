@@ -1,0 +1,17 @@
+no data ->empty list
+single data -> optional
+
+no properties discovered to create BeanSerializer => @Data
+
+Optional => cause of null problem
+
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+in model
+
+@CreationTimestamp
+@UpdateTimestamp
+
+
+Delete => hard Delete
+       => soft Delete	

@@ -1,1 +1,21 @@
 defacto standard => not standard but everything is ok.
+
+JPA => specification
+
+Hibernate, MyBatics, IBatics, Eclipse Link.
+
+@Entity
+@Id
+@Column....
+
+JPA => Hibernate use
+
+Hibernate => no need to execute sql
+
+Model
+Map
+Repository
+Service
+Controller
+
+RDBMS => One Concept => One Table

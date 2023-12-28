@@ -1,0 +1,364 @@
+{
+	"info": {
+		"_postman_id": "7d6e1075-0c60-453f-bf91-823677cd36b6",
+		"name": "JavaEE5thBatch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2592466"
+	},
+	"item": [
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "GetAllBook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/books/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateBook",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"3\",\r\n    \"title\":\"dfsdar\",\r\n    \"author\": \"three\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBook",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"title\":\"three\",\r\n    \"author\":\"update\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/books/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBook",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/books/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "GetAllPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/posts/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"4\",\r\n    \"title\":\"title 1\",\r\n    \"content\": \"content of post 1\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePost",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"title\":\"three\",\r\n    \"content\":\"update\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/posts/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/posts/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "GetAllMovie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/movies",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMovieById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/movies/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateMovie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":4,\r\n    \"title\":\"Home Alone 2\",\r\n    \"year\": 1994,\r\n    \"genre\": \"Comedy\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/movies",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMovie",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"title\":\"three\",\r\n    \"year\":1990,\r\n    \"genre\":\"update\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/movies/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMovie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/movies/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
