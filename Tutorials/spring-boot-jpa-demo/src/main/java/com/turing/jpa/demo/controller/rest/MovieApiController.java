@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.turing.jpa.demo.dao.MovieRepository;
@@ -36,6 +37,18 @@ public class MovieApiController {
 	List<MovieDto> getAllMovies()
 	{
 		return this.movieService.getAllMovie();
+	}
+	
+	@GetMapping("/year/{year}")
+	List<MovieDto> getAllMovieByYear(@PathVariable Integer year)
+	{
+		return this.movieService.getAllMovieByYear(year);
+	}
+	
+	@GetMapping("/title")
+	List<MovieDto> getAllMovieByTitle(@RequestParam String title)
+	{
+		return this.movieService.getAllMovieByTitle(title);
 	}
 	
 	@GetMapping("/{movieId}")

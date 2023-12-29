@@ -19,11 +19,11 @@ public class Movie extends BaseEntity{
 	private static final long serialVersionUID = 1L;
 	
 	@Column
-	String title;
+	private String title;
 	
 	@Column
-	Integer year;
+	private Integer year;
 	
 	@Column
-	String genre;
+	private String genre;
 }
