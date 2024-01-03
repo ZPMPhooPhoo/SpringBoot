@@ -9,6 +9,10 @@ public interface MovieService {
 	List<MovieDto> getAllMovie();
 	List<MovieDto> getAllMovieByYear(Integer year);
 	List<MovieDto> getAllMovieByTitle(String title);
+	List<MovieDto> getAllMovieByGenreAndYear(String title, Integer year);
+	List<MovieDto> getAllMovieByGenreOrYear(String title, Integer year);
+	List<MovieDto> getAllGenre(String genre);
+	List<MovieDto> getAllMovieByYearBetween(Integer startYear, Integer endYear);
 	Optional<MovieDto> getMovieById(Long id);
 	MovieDto saveMovie(MovieDto movieDto);
 	MovieDto updateMovie(MovieDto movieDto);

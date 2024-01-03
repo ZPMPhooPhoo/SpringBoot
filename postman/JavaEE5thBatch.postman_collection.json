@@ -246,6 +246,25 @@
 			"name": "movies",
 			"item": [
 				{
+					"name": "GetMovieById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/movies/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "GetAllMovie",
 					"request": {
 						"method": "GET",
@@ -264,19 +283,163 @@
 					"response": []
 				},
 				{
-					"name": "GetMovieById",
+					"name": "GetAllMovieByYear",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/movies/1",
+							"raw": "{{url}}/api/movies/year/1997",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"movies",
-								"1"
+								"year",
+								"1997"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllMovieByTitle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/movies/title?title=Titanic",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"title"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Titanic"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllMovieByGenreAndYear",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/movies/search/genre/year?genre=drama&year=1997",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"search",
+								"genre",
+								"year"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "drama"
+								},
+								{
+									"key": "year",
+									"value": "1997"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllMovieByGenreOrYear",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/movies/search/genreOr/year?genre=drama&year=1990",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"search",
+								"genreOr",
+								"year"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "drama"
+								},
+								{
+									"key": "year",
+									"value": "1990"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllMovieDistnctGenere",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/movies/genres?genre=Romance",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"genres"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "Romance"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllMovieByYearBetween",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/movies/search/year/between?startYear=1990&endYear=2000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"search",
+								"year",
+								"between"
+							],
+							"query": [
+								{
+									"key": "startYear",
+									"value": "1990"
+								},
+								{
+									"key": "endYear",
+									"value": "2000"
+								}
 							]
 						}
 					},

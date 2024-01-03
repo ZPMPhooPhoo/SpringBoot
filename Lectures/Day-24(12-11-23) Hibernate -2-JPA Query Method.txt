@@ -1,0 +1,59 @@
+JPA Query Method
+https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html
+
+
+jpa hibernate show sql param
+
+logging.level.org.hibernate = info
+logging.level.org.hibernate.SQL = debug
+logging.level.org.hibernate.orm.jdbc.bind = trace
+logging.level.org.hibernate.stat = debug
+logging.level.org.hibernate.SQL_SLOW = info
+logging.level.org.hibernate.cache = debug
+
+Don't do in production, should be in devlopment
+
+
+Unit Testing
+need spring/boot/starter/test dependency
+JUnit
+
+Arrange
+	Stack stack = new Stack();
+Act
+	stack.push(10);
+Assert
+	int data = stack.pop();
+	assertEqual(10,data);
+
+https://www.baeldung.com/spring-boot-testing?fbclid=IwAR18MA3zQTJi_pwZ44Tp0DeUcpsTvdCl5zKwOIv2dRy_BwbdMzBBODAms6I
+
+How to run test?
+src/test/java
+com.turing.jpa.demo
+SpringBootJpaDemoApplicationTests
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

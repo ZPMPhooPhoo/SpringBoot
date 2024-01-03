@@ -48,7 +48,34 @@ public class MovieApiController {
 	@GetMapping("/title")
 	List<MovieDto> getAllMovieByTitle(@RequestParam String title)
 	{
+		log.info("getBytitleController " +title);
 		return this.movieService.getAllMovieByTitle(title);
+	}
+	
+	@GetMapping("/search/genre/year")
+	List<MovieDto> getAllMovieByGenreAndYear(@RequestParam String genre, @RequestParam Integer year)
+	{
+		log.info("getByGenreAndYear Controller " + genre + " year" + year);
+		return this.movieService.getAllMovieByGenreAndYear(genre,year);
+	}
+	
+	@GetMapping("/search/genreOr/year")
+	List<MovieDto> getAllMovieByGenreOrYear(@RequestParam String genre, @RequestParam Integer year)
+	{
+		log.info("getByGenreOrYear Controller " + genre + " year" + year);
+		return this.movieService.getAllMovieByGenreOrYear(genre,year);
+	}
+	
+	@GetMapping("/genres")
+	List<MovieDto> getAllGenres(@RequestParam String genre)
+	{
+		return this.movieService.getAllGenre(genre);
+	}
+	
+	@GetMapping("/search/year/between")
+	List<MovieDto> getAllMovieByYearBetween(@RequestParam Integer startYear, @RequestParam Integer endYear)
+	{
+		return this.movieService.getAllMovieByYearBetween(startYear,endYear);
 	}
 	
 	@GetMapping("/{movieId}")
