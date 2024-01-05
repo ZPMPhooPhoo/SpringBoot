@@ -15,7 +15,7 @@ import lombok.Data;
 import lombok.ToString;
 
 @Data
-@ToString
+@ToString//(callSuper=true)
 @Entity
 public class Movie extends BaseEntity{
 	private static final long serialVersionUID = 1L;

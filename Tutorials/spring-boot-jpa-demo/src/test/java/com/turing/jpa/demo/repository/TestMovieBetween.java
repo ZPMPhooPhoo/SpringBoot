@@ -2,6 +2,8 @@ package com.turing.jpa.demo.repository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -32,18 +34,29 @@ public class TestMovieBetween {
 		int result = add(1,2);
 		assertEquals(3, result);
 		*/
-		List<Movie> movies = this.movieRepository.findByYearBetween(1990,2010);
+		//List<Movie> movies = this.movieRepository.findByYearBetween(1990,2010);
 		
+		//List<Movie> movies = this.movieRepository.findByYearLessThan(2010);
+		
+		//List<Movie> movies = this.movieRepository.findByCreatedAtIsNull();
+		
+		//List<Movie> movies = this.movieRepository.findByTitleLike("t%");
+		
+		//List<Movie> movies = this.movieRepository.findAllByOrderByYear();
+		
+		/*
+		Collection<Integer> years = new ArrayList<Integer>();
+		years.add(1980);
+		years.add(2020);		
+		List<Movie> movies = this.movieRepository.findAllByYearIn(years);
 		for (Movie movie : movies)
 		{
 			log.info("movie " + movie);
+			System.err.println(movie.toString());
 		}
+		*/
 		
-		List<Movie> moviess = this.movieRepository.findByYearLessThan(2010);
-		
-		for (Movie movie : moviess)
-		{
-			log.info("movie " + movie);
-		}
+		Movie movie = this.movieRepository.findTopByOrderByYearDesc();
+		System.err.println(movie.toString());
 	}
 }

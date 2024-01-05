@@ -1,0 +1,15 @@
+Query Method
+
+Custom query => JPQL, SQL
+
+https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html
+
+JPQL => object ကိုရည်ရွယ်
+
+JPQL Query is better than SQL Query.
+SQL Query is difficult for maintenance.
+So, if really need and can't do with JPQL, use SQL.
+
+parameter => index, name
+
+SELECT genre,count(*) FROM movie GROUP BY genre;
