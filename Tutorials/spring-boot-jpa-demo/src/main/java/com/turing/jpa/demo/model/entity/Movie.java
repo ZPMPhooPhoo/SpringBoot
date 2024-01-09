@@ -11,6 +11,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Transient;
 import lombok.Data;
 import lombok.ToString;
 
@@ -23,9 +24,12 @@ public class Movie extends BaseEntity{
 	@Column
 	private String title;
 	
-	@Column
+	@Column(nullable = false)
 	private Integer year;
 	
 	@Column
 	private String genre;
+	
+	@Transient
+	private String something;
 }

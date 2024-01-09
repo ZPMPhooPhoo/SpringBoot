@@ -4,11 +4,15 @@ import java.util.Collection;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.turing.jpa.demo.model.dto.GenreCountDto;
+import com.turing.jpa.demo.model.dto.GenreCountDtoTwo;
 import com.turing.jpa.demo.model.entity.Movie;
+
+import jakarta.transaction.Transactional;
 
 public interface MovieRepository extends JpaRepository<Movie, Long> {
 	List<Movie> findByYear(Integer year);
@@ -34,6 +38,9 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 	@Query("SELECT count(m) FROM Movie m WHERE m.genre = genre")
 	int findTotalMovieByGenres(@Param("genre") String genere);
 	
+//	@Query("SELECT distinct(m.genre) FROM Movie m")
+//	List<String> getAllGeneres();	
+	
 	@Query("SELECT distinct(m.genre) FROM Movie m")
 	List<Object> getAllGeneres();	
 	
@@ -41,12 +48,19 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 	List<GenreCountDto> getAllGenresCount();
 	
 	
+	//SQL
+	@Query(value="SELECT new com.turing.jpa.demo.model.dto.GenreCountDtoTwo(m.genre,count(m.genre)) "+ "FROM Movie m GROUP BY m.genre")
+	List<GenreCountDtoTwo> getAllGenresCountTwo();
 	
+	@Modifying
+	@Transactional
+	@Query("UPDATE Movie m SET m.year = ?2 WHERE m.id = ?1")
+	int updateYearByMovieId(Long movieId, Integer year);
 	
-	
-	
-	
-	
+	@Modifying
+	@Transactional
+	@Query("DELETE FROM Movie m WHERE m.id = ?1")
+	int deleteMovieById(Long movieId);
 	
 	
 	

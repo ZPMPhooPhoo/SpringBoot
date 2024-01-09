@@ -1,0 +1,54 @@
+QBE
+https://docs.spring.io/spring-data/jpa/reference/repositories/query-by-example.html?fbclid=IwAR2E2F5RWQPS_eEklRSTJTBW0UTX9Djy71Wza8NnvqgWTrXvIwPQLzP_XNc
+
+QueryMethod => model
+CustomQuery => projection, column
+QueryByExample
+findAll, findById
+individual =>  save
+many => modifying
+
+Use CriteriaAPI for dynamic qery
+
+Mapping
+1.Application Domain
+2.Solution Domain
+
+If Entity name is sql keyword
+use back tick
+@Table(name="`USER`")
+
+Immutable is cannot insert, update, delete.
+
+CREATE VIEW v AS SELECT qty, price, qty*price AS value FROM t;
+
+VIEW is read only.
+View is only for querying
+
+Use Wrapper
+
+DB Type
+Java Type
+
+Java String->DB,varchar, text
+
+Integer price;
+Integer quantity;
+Integer total;
+
+DB don't need total.
+
+total is Transient. Transient means data no need to save in database.
+@javax.persistence.Transient
+
+@Basic(optional = false) => must consist
+
+Date birthday
+
+age is derived properties
+
+
+
+
+
+
